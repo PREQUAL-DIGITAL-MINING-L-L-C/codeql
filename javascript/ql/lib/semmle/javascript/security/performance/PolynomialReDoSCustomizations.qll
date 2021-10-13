@@ -48,7 +48,7 @@ module PolynomialReDoS {
    * regular expression denial-of-service vulnerabilities.
    */
   class RequestInputAccessAsSource extends Source instanceof HTTP::RequestInputAccess {
-    override string getKind() { result = super.getKind() }
+    override string getKind() { result = HTTP::RequestInputAccess.super.getKind() }
   }
 
   /**

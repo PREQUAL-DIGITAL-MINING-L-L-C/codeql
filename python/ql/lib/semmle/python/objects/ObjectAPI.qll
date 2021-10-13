@@ -719,7 +719,7 @@ abstract class FunctionValue extends CallableValue {
 
 /** Class representing Python functions */
 class PythonFunctionValue extends FunctionValue instanceof PythonFunctionObjectInternal {
-  override string getQualifiedName() { result = super.getScope().getQualifiedName() }
+  override string getQualifiedName() { result = PythonFunctionObjectInternal.super.getScope().getQualifiedName() }
 
   override string descriptiveString() {
     if this.getScope().isMethod()
@@ -763,7 +763,7 @@ class PythonFunctionValue extends FunctionValue instanceof PythonFunctionObjectI
 
 /** Class representing builtin functions, such as `len` or `print` */
 class BuiltinFunctionValue extends FunctionValue instanceof BuiltinFunctionObjectInternal {
-  override string getQualifiedName() { result = super.getName() }
+  override string getQualifiedName() { result = BuiltinFunctionObjectInternal.super.getName() }
 
   override string descriptiveString() { result = "builtin-function " + this.getName() }
 

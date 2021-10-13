@@ -64,22 +64,22 @@ module DOM {
    * An HTML element, viewed as an `ElementDefinition`.
    */
   private class HtmlElementDefinition extends ElementDefinition, @xmlelement instanceof HTML::Element {
-    override string getName() { result = super.getName() }
+    override string getName() { result = HTML::Element.super.getName() }
 
     override AttributeDefinition getAttribute(int i) {
-      result = super.getAttribute(i)
+      result = HTML::Element.super.getAttribute(i)
     }
 
-    override ElementDefinition getParent() { result = super.getParent() }
+    override ElementDefinition getParent() { result = HTML::Element.super.getParent() }
   }
 
   /**
    * A JSX element, viewed as an `ElementDefinition`.
    */
   private class JsxElementDefinition extends ElementDefinition, @jsx_element instanceof JSXElement {
-    override string getName() { result = super.getName() }
+    override string getName() { result = JSXElement.super.getName() }
 
-    override AttributeDefinition getAttribute(int i) { result = super.getAttribute(i) }
+    override AttributeDefinition getAttribute(int i) { result = JSXElement.super.getAttribute(i) }
 
     override ElementDefinition getParent() { result = super.getJsxParent() }
   }
@@ -128,11 +128,11 @@ module DOM {
    * An HTML attribute, viewed as an `AttributeDefinition`.
    */
   private class HtmlAttributeDefinition extends AttributeDefinition, @xmlattribute instanceof HTML::Attribute {
-    override string getName() { result = super.getName() }
+    override string getName() { result = HTML::Attribute.super.getName() }
 
     override string getStringValue() { result = super.getValue() }
 
-    override ElementDefinition getElement() { result = super.getElement() }
+    override ElementDefinition getElement() { result = HTML::Attribute.super.getElement() }
   }
 
   /**
