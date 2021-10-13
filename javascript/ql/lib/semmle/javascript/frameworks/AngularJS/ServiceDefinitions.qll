@@ -635,9 +635,7 @@ class ProviderRecipeDefinition extends RecipeDefinition {
 }
 
 private class ProviderRecipeServiceInjection extends DependencyInjection instanceof ProviderRecipeDefinition {
-  override DataFlow::Node getAnInjectableFunction() {
-    result = super.getAService()
-  }
+  override DataFlow::Node getAnInjectableFunction() { result = super.getAService() }
 }
 
 /**

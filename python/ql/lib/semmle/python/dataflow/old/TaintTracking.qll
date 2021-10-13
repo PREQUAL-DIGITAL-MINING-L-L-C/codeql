@@ -641,7 +641,7 @@ module DataFlow {
 
   deprecated private class ConfigurationAdapter extends TaintTracking::Configuration instanceof Configuration {
     override predicate isSource(DataFlow::Node node, TaintKind kind) {
-      Configuration. super.isSource(node.asCfgNode()) and
+      Configuration.super.isSource(node.asCfgNode()) and
       kind instanceof DataFlowType
     }
 
