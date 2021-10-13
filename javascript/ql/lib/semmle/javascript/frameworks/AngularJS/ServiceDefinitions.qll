@@ -634,11 +634,9 @@ class ProviderRecipeDefinition extends RecipeDefinition {
   }
 }
 
-private class ProviderRecipeServiceInjection extends DependencyInjection {
-  ProviderRecipeServiceInjection() { this instanceof ProviderRecipeDefinition }
-
+private class ProviderRecipeServiceInjection extends DependencyInjection instanceof ProviderRecipeDefinition {
   override DataFlow::Node getAnInjectableFunction() {
-    result = this.(ProviderRecipeDefinition).getAService()
+    result = super.getAService()
   }
 }
 
